@@ -1,0 +1,15 @@
+*~
+*.diff
+*.patch
+.DS_Store
+.project
+.settings
+.idea
+composer.lock
+/vendor/**/docs/*
+/vendor/**/tests/*
+/vendor/**/.changes/*
+/lib/**/example/*
+/node_modules
+!.gitignore
+!.gitkeep
