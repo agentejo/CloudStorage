@@ -34,6 +34,10 @@ $this->on('cockpit.filestorages.init', function(&$storages) {
                     $url = "{$url}/{$settings['bucket']}";
                 }
 
+                if ($settings['prefix']) {
+                    $url = "{$url}/{$settings['prefix']}";
+                }
+
                 $client = new Aws\S3\S3Client([
                     'credentials' => [
                         'key'    => $settings['key'],
