@@ -24,6 +24,10 @@ $this->on('cockpit.filestorages.init', function(&$storages) {
                     break;
                 }
 
+                if (!isset($settings['prefix'])) {
+                    $settings['prefix'] = '';
+                }
+
                 $url = $settings['url'];
 
                 if (!strpos($url, $settings['bucket'])) {
@@ -41,7 +45,7 @@ $this->on('cockpit.filestorages.init', function(&$storages) {
 
                 $storages[$key] = [
                     'adapter' => 'League\Flysystem\AwsS3v3\AwsS3Adapter',
-                    'args'    => [$client, $settings['bucket']],
+                    'args'    => [$client, $settings['bucket'], $settings['prefix']],
                     'mount'   => true,
                     'url'     => $url
                 ];
