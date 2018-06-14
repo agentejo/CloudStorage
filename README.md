@@ -16,7 +16,13 @@ cloudstorage:
         secret: xxxSecretxxx
         region: eu-central-1
         bucket: mybucket
+
+        # optional
+        prefix: subfolder-name
         url: https://s3.eu-central-1.amazonaws.com
 ```
+
+
+
 
 That's it!
