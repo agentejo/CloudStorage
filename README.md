@@ -23,6 +23,4 @@ cloudstorage:
 ```
 
 
-
-
 That's it!

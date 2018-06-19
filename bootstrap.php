@@ -28,13 +28,9 @@ $this->on('cockpit.filestorages.init', function(&$storages) {
                     $settings['prefix'] = '';
                 }
 
-                $url = $settings['url'] ?? 'https://s3.'.$settings['region'].'.amazonaws.com';
+                $url = $settings['url'] ?? 'https://s3.'.$settings['region'].'.amazonaws.com/'.$settings['bucket'];
 
-                if (!strpos($url, $settings['bucket'])) {
-                    $url = "{$url}/{$settings['bucket']}";
-                }
-
-                if ($settings['prefix']) {
+                if (!isset($settings['url']) && isset($settings['prefix'])) {
                     $url = "{$url}/{$settings['prefix']}";
                 }
 
