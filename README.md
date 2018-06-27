@@ -1,12 +1,14 @@
 Use cloud storage providers to store assets or thumbnails.
 
-**Notice:** Only Amazon s3 supported right now
+**Notice:** Only Amazon s3 and Azure Blobstorage are supported right now
 
 # Usage
 
 Add files to `addons/CloudStorage`.
 
 Then update the config (`config/config.yaml`), e.g:
+
+### Amazon S3
 
 ```
 cloudstorage:
@@ -22,5 +24,15 @@ cloudstorage:
         url: https://s3.eu-central-1.amazonaws.com
 ```
 
+### Azure Blobstorage
+
+```
+cloudstorage:
+    assets:
+        type: azure
+        key: 9xW8k4ftQ7ZGJqQ...
+        account: my-account
+        container: my-container
+```
 
 That's it!
