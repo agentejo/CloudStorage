@@ -30,9 +30,12 @@ cloudstorage:
 cloudstorage:
     assets:
         type: azure
-        key: 9xW8k4ftQ7ZGJqQ...
+        key: xxxKeyxxx
         account: my-account
         container: my-container
+
+        # optional
+        url: https://my-custom-url.com
 ```
 
 That's it!
