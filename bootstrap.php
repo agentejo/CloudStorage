@@ -72,6 +72,48 @@ $this->on('cockpit.filestorages.init', function(&$storages) {
                 ];
 
                 break;
+
+            case 'minio':
+
+                if (!isset($settings['key'], $settings['secret'], $settings['bucket'])) {
+                    break;
+                }
+
+                if (!isset($settings['region'])) {
+                    $settings['region'] = 'us-east-1';
+                }
+
+                if (!isset($settings['prefix'])) {
+                    $settings['prefix'] = '';
+                }
+
+                $endpoint = $settings['endpoint'] ?? 'http://localhost:9000';
+
+                $image_address = $settings['image_address'] ?? $endpoint."/".$settings['bucket'];
+
+                if (!isset($settings['image_address']) && isset($settings['prefix'])) {
+                    $image_address = "{$image_address}/{$settings['prefix']}";
+                }
+
+                $client = new Aws\S3\S3Client([
+                    'credentials' => [
+                        'key'    => $settings['key'],
+                        'secret' => $settings['secret']
+                    ],
+                    'use_path_style_endpoint' => true,
+                    'endpoint'                => $endpoint,
+                    'region'                  => $settings['region'],
+                    'version'                 => isset($settings['version']) ? $settings['version'] : 'latest',
+                ]);
+
+                $storages[$key] = [
+                    'adapter' => 'League\Flysystem\AwsS3v3\AwsS3Adapter',
+                    'args'    => [$client, $settings['bucket'], $settings['prefix']],
+                    'mount'   => true,
+                    'url'     => $image_address
+                ];
+
+                break;
         }
 
     }
