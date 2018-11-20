@@ -16,6 +16,10 @@ $this->on('cockpit.filestorages.init', function(&$storages) {
 
         $type = isset($settings['type']) ? $settings['type'] : 's3';
 
+        if (!isset($settings['prefix'])) {
+            $settings['prefix'] = '';
+        }
+
         switch ($type) {
 
             case 's3':
@@ -24,13 +28,9 @@ $this->on('cockpit.filestorages.init', function(&$storages) {
                     break;
                 }
 
-                if (!isset($settings['prefix'])) {
-                    $settings['prefix'] = '';
-                }
-
                 $url = $settings['url'] ?? 'https://s3.'.$settings['region'].'.amazonaws.com/'.$settings['bucket'];
 
-                if (!isset($settings['url']) && isset($settings['prefix'])) {
+                if (!isset($settings['url']) && $settings['prefix']) {
                     $url = "{$url}/{$settings['prefix']}";
                 }
 
@@ -64,9 +64,13 @@ $this->on('cockpit.filestorages.init', function(&$storages) {
 
                 $url = $settings['url'] ?? 'https://'.$settings['account'].'.blob.core.windows.net/'.$settings['container'];
 
+                if (!isset($settings['url']) && $settings['prefix']) {
+                    $url = "{$url}/{$settings['prefix']}";
+                }
+
                 $storages[$key] = [
                     'adapter' => 'League\Flysystem\Azure\AzureAdapter',
-                    'args'    => [$blobRestProxy, $settings['container']],
+                    'args'    => [$blobRestProxy, $settings['container'], $settings['prefix']],
                     'mount'   => true,
                     'url'     => $url
                 ];
