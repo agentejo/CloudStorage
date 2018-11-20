@@ -87,15 +87,11 @@ $this->on('cockpit.filestorages.init', function(&$storages) {
                     $settings['region'] = 'us-east-1';
                 }
 
-                if (!isset($settings['prefix'])) {
-                    $settings['prefix'] = '';
-                }
-
                 $endpoint = $settings['endpoint'] ?? 'http://localhost:9000';
 
                 $image_address = $settings['image_address'] ?? $endpoint."/".$settings['bucket'];
 
-                if (!isset($settings['image_address']) && isset($settings['prefix'])) {
+                if (!isset($settings['image_address']) && $settings['prefix']) {
                     $image_address = "{$image_address}/{$settings['prefix']}";
                 }
 
