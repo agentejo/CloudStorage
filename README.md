@@ -20,6 +20,7 @@ cloudstorage:
         bucket: mybucket
 
         # optional
+        endpoint: https://eu-central-1.amazonaws.com
         prefix: subfolder-name
         url: https://s3.eu-central-1.amazonaws.com
 ```

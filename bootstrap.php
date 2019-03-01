@@ -34,14 +34,17 @@ $this->on('cockpit.filestorages.init', function(&$storages) {
                     $url = "{$url}/{$settings['prefix']}";
                 }
 
-                $client = new Aws\S3\S3Client([
-                    'credentials' => [
-                        'key'    => $settings['key'],
-                        'secret' => $settings['secret']
+                $client = new Aws\S3\S3Client(array_merge(
+                    [
+                        'credentials' => [
+                            'key'    => $settings['key'],
+                            'secret' => $settings['secret']
+                        ],
+                        'region'  => $settings['region'],
+                        'version' => isset($settings['version']) ? $settings['version'] : 'latest',
                     ],
-                    'region'  => $settings['region'],
-                    'version' => isset($settings['version']) ? $settings['version'] : 'latest',
-                ]);
+                    $settings['endpoint'] ? ['endpoint' => $settings['endpoint']] : []
+                ));
 
                 $storages[$key] = [
                     'adapter' => 'League\Flysystem\AwsS3v3\AwsS3Adapter',
