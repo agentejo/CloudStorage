@@ -5,6 +5,7 @@ namespace League\Flysystem\AwsS3v3;
 use Aws\Result;
 use Aws\S3\Exception\DeleteMultipleObjectsException;
 use Aws\S3\Exception\S3Exception;
+use Aws\S3\Exception\S3MultipartUploadException;
 use Aws\S3\S3Client;
 use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\Adapter\CanOverwriteFiles;
@@ -27,6 +28,7 @@ class AwsS3Adapter extends AbstractAdapter implements CanOverwriteFiles
         'Metadata'      => 'metadata',
         'StorageClass'  => 'storageclass',
         'ETag'          => 'etag',
+        'VersionId'     => 'versionid'
     ];
 
     /**
@@ -570,7 +572,7 @@ class AwsS3Adapter extends AbstractAdapter implements CanOverwriteFiles
      * @param        $body
      * @param Config $config
      *
-     * @return array
+     * @return array|bool
      */
     protected function upload($path, $body, Config $config)
     {
@@ -583,16 +585,20 @@ class AwsS3Adapter extends AbstractAdapter implements CanOverwriteFiles
         }
 
         if ( ! isset($options['ContentLength'])) {
-            $options['ContentLength'] = is_string($body) ? Util::contentSize($body) : Util::getStreamSize($body);
+            $options['ContentLength'] = is_resource($body) ? Util::getStreamSize($body) : Util::contentSize($body);
         }
 
         if ($options['ContentLength'] === null) {
             unset($options['ContentLength']);
         }
 
-        $this->s3Client->upload($this->bucket, $key, $body, $acl, ['params' => $options]);
+        try {
+            $this->s3Client->upload($this->bucket, $key, $body, $acl, ['params' => $options]);
+        } catch (S3MultipartUploadException $multipartUploadException) {
+            return false;
+        }
 
-        return $this->normalizeResponse($options, $key);
+        return $this->normalizeResponse($options, $path);
     }
 
     /**

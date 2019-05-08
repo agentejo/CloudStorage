@@ -6,6 +6,7 @@
 .settings
 .idea
 composer.lock
+/vendor/**/.github/*
 /vendor/**/docs/*
 /vendor/**/tests/*
 /vendor/**/.changes/*

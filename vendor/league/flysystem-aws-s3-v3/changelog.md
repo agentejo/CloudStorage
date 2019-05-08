@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.0.22 - 2019-01-31
+
+* Invert type check where string/resource difference is determined for ContentLength option.
+
+## 1.0.21 - 2018-10-08
+
+* Catch multipart upload errors.
+
+## 1.0.20 - 2018-09-25
+
+* Fixed prefix handling for uploads (writes and updates).
+
+## 1.0.19 - 2018-03-27
+
+* Added ETAG to response mapping.
+
 ## 1.0.18 - 2017-06-30
 
 ### Fixed

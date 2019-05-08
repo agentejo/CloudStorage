@@ -63,7 +63,7 @@ $this->on('cockpit.filestorages.init', function(&$storages) {
                 }
 
                 $endpoint = sprintf('DefaultEndpointsProtocol=https;AccountName=%s;AccountKey=%s', $settings['account'], $settings['key']);
-                $blobRestProxy = MicrosoftAzure\Storage\Common\ServicesBuilder::getInstance()->createBlobService($endpoint);
+                $blobRestProxy = MicrosoftAzure\Storage\Blob\BlobRestProxy::createBlobService($endpoint);
 
                 $url = $settings['url'] ?? 'https://'.$settings['account'].'.blob.core.windows.net/'.$settings['container'];
 
@@ -72,7 +72,7 @@ $this->on('cockpit.filestorages.init', function(&$storages) {
                 }
 
                 $storages[$key] = [
-                    'adapter' => 'League\Flysystem\Azure\AzureAdapter',
+                    'adapter' => 'League\Flysystem\AzureBlobStorage\AzureBlobStorageAdapter',
                     'args'    => [$blobRestProxy, $settings['container'], $settings['prefix']],
                     'mount'   => true,
                     'url'     => $url
