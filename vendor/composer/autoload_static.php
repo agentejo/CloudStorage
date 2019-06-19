@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInite77817f629e24a1497428bd37ff669bc
+class ComposerStaticInit8954ed7256e73f35375ec89aa30d09ba
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -341,6 +341,7 @@ class ComposerStaticInite77817f629e24a1497428bd37ff669bc
         'Aws\\Exception\\CouldNotCreateChecksumException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Exception/CouldNotCreateChecksumException.php',
         'Aws\\Exception\\CredentialsException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Exception/CredentialsException.php',
         'Aws\\Exception\\EventStreamDataException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Exception/EventStreamDataException.php',
+        'Aws\\Exception\\IncalculablePayloadException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Exception/IncalculablePayloadException.php',
         'Aws\\Exception\\MultipartUploadException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Exception/MultipartUploadException.php',
         'Aws\\Exception\\UnresolvedApiException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Exception/UnresolvedApiException.php',
         'Aws\\Exception\\UnresolvedEndpointException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Exception/UnresolvedEndpointException.php',
@@ -363,6 +364,8 @@ class ComposerStaticInite77817f629e24a1497428bd37ff669bc
         'Aws\\Glue\\GlueClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Glue/GlueClient.php',
         'Aws\\Greengrass\\Exception\\GreengrassException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Greengrass/Exception/GreengrassException.php',
         'Aws\\Greengrass\\GreengrassClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Greengrass/GreengrassClient.php',
+        'Aws\\GroundStation\\Exception\\GroundStationException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/GroundStation/Exception/GroundStationException.php',
+        'Aws\\GroundStation\\GroundStationClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/GroundStation/GroundStationClient.php',
         'Aws\\GuardDuty\\Exception\\GuardDutyException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/GuardDuty/Exception/GuardDutyException.php',
         'Aws\\GuardDuty\\GuardDutyClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/GuardDuty/GuardDutyClient.php',
         'Aws\\HandlerList' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/HandlerList.php',
@@ -390,8 +393,14 @@ class ComposerStaticInite77817f629e24a1497428bd37ff669bc
         'Aws\\IoT1ClickProjects\\IoT1ClickProjectsClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/IoT1ClickProjects/IoT1ClickProjectsClient.php',
         'Aws\\IoTAnalytics\\Exception\\IoTAnalyticsException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/IoTAnalytics/Exception/IoTAnalyticsException.php',
         'Aws\\IoTAnalytics\\IoTAnalyticsClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/IoTAnalytics/IoTAnalyticsClient.php',
+        'Aws\\IoTEventsData\\Exception\\IoTEventsDataException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/IoTEventsData/Exception/IoTEventsDataException.php',
+        'Aws\\IoTEventsData\\IoTEventsDataClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/IoTEventsData/IoTEventsDataClient.php',
+        'Aws\\IoTEvents\\Exception\\IoTEventsException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/IoTEvents/Exception/IoTEventsException.php',
+        'Aws\\IoTEvents\\IoTEventsClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/IoTEvents/IoTEventsClient.php',
         'Aws\\IoTJobsDataPlane\\Exception\\IoTJobsDataPlaneException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/IoTJobsDataPlane/Exception/IoTJobsDataPlaneException.php',
         'Aws\\IoTJobsDataPlane\\IoTJobsDataPlaneClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/IoTJobsDataPlane/IoTJobsDataPlaneClient.php',
+        'Aws\\IoTThingsGraph\\Exception\\IoTThingsGraphException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/IoTThingsGraph/Exception/IoTThingsGraphException.php',
+        'Aws\\IoTThingsGraph\\IoTThingsGraphClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/IoTThingsGraph/IoTThingsGraphClient.php',
         'Aws\\IotDataPlane\\Exception\\IotDataPlaneException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/IotDataPlane/Exception/IotDataPlaneException.php',
         'Aws\\IotDataPlane\\IotDataPlaneClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/IotDataPlane/IotDataPlaneClient.php',
         'Aws\\Iot\\Exception\\IotException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Iot/Exception/IotException.php',
@@ -446,6 +455,8 @@ class ComposerStaticInite77817f629e24a1497428bd37ff669bc
         'Aws\\MediaConvert\\MediaConvertClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MediaConvert/MediaConvertClient.php',
         'Aws\\MediaLive\\Exception\\MediaLiveException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MediaLive/Exception/MediaLiveException.php',
         'Aws\\MediaLive\\MediaLiveClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MediaLive/MediaLiveClient.php',
+        'Aws\\MediaPackageVod\\Exception\\MediaPackageVodException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MediaPackageVod/Exception/MediaPackageVodException.php',
+        'Aws\\MediaPackageVod\\MediaPackageVodClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MediaPackageVod/MediaPackageVodClient.php',
         'Aws\\MediaPackage\\Exception\\MediaPackageException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MediaPackage/Exception/MediaPackageException.php',
         'Aws\\MediaPackage\\MediaPackageClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MediaPackage/MediaPackageClient.php',
         'Aws\\MediaStoreData\\Exception\\MediaStoreDataException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MediaStoreData/Exception/MediaStoreDataException.php',
@@ -475,6 +486,12 @@ class ComposerStaticInite77817f629e24a1497428bd37ff669bc
         'Aws\\Organizations\\OrganizationsClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Organizations/OrganizationsClient.php',
         'Aws\\PI\\Exception\\PIException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/PI/Exception/PIException.php',
         'Aws\\PI\\PIClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/PI/PIClient.php',
+        'Aws\\PersonalizeEvents\\Exception\\PersonalizeEventsException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/PersonalizeEvents/Exception/PersonalizeEventsException.php',
+        'Aws\\PersonalizeEvents\\PersonalizeEventsClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/PersonalizeEvents/PersonalizeEventsClient.php',
+        'Aws\\PersonalizeRuntime\\Exception\\PersonalizeRuntimeException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/PersonalizeRuntime/Exception/PersonalizeRuntimeException.php',
+        'Aws\\PersonalizeRuntime\\PersonalizeRuntimeClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/PersonalizeRuntime/PersonalizeRuntimeClient.php',
+        'Aws\\Personalize\\Exception\\PersonalizeException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Personalize/Exception/PersonalizeException.php',
+        'Aws\\Personalize\\PersonalizeClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Personalize/PersonalizeClient.php',
         'Aws\\PhpHash' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/PhpHash.php',
         'Aws\\PinpointEmail\\Exception\\PinpointEmailException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/PinpointEmail/Exception/PinpointEmailException.php',
         'Aws\\PinpointEmail\\PinpointEmailClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/PinpointEmail/PinpointEmailClient.php',
@@ -594,6 +611,7 @@ class ComposerStaticInite77817f629e24a1497428bd37ff669bc
         'Aws\\Ssm\\SsmClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Ssm/SsmClient.php',
         'Aws\\StorageGateway\\Exception\\StorageGatewayException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/StorageGateway/Exception/StorageGatewayException.php',
         'Aws\\StorageGateway\\StorageGatewayClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/StorageGateway/StorageGatewayClient.php',
+        'Aws\\StreamRequestPayloadMiddleware' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/StreamRequestPayloadMiddleware.php',
         'Aws\\Sts\\Exception\\StsException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Sts/Exception/StsException.php',
         'Aws\\Sts\\StsClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Sts/StsClient.php',
         'Aws\\Support\\Exception\\SupportException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Support/Exception/SupportException.php',
@@ -883,9 +901,9 @@ class ComposerStaticInite77817f629e24a1497428bd37ff669bc
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInite77817f629e24a1497428bd37ff669bc::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInite77817f629e24a1497428bd37ff669bc::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInite77817f629e24a1497428bd37ff669bc::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit8954ed7256e73f35375ec89aa30d09ba::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit8954ed7256e73f35375ec89aa30d09ba::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit8954ed7256e73f35375ec89aa30d09ba::$classMap;
 
         }, null, ClassLoader::class);
     }

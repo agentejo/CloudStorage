@@ -156,6 +156,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionGlue(array $args = [])
  * @method \Aws\Greengrass\GreengrassClient createGreengrass(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionGreengrass(array $args = [])
+ * @method \Aws\GroundStation\GroundStationClient createGroundStation(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionGroundStation(array $args = [])
  * @method \Aws\GuardDuty\GuardDutyClient createGuardDuty(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionGuardDuty(array $args = [])
  * @method \Aws\Health\HealthClient createHealth(array $args = [])
@@ -172,8 +174,14 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionIoT1ClickProjects(array $args = [])
  * @method \Aws\IoTAnalytics\IoTAnalyticsClient createIoTAnalytics(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionIoTAnalytics(array $args = [])
+ * @method \Aws\IoTEvents\IoTEventsClient createIoTEvents(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionIoTEvents(array $args = [])
+ * @method \Aws\IoTEventsData\IoTEventsDataClient createIoTEventsData(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionIoTEventsData(array $args = [])
  * @method \Aws\IoTJobsDataPlane\IoTJobsDataPlaneClient createIoTJobsDataPlane(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionIoTJobsDataPlane(array $args = [])
+ * @method \Aws\IoTThingsGraph\IoTThingsGraphClient createIoTThingsGraph(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionIoTThingsGraph(array $args = [])
  * @method \Aws\Iot\IotClient createIot(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionIot(array $args = [])
  * @method \Aws\IotDataPlane\IotDataPlaneClient createIotDataPlane(array $args = [])
@@ -228,6 +236,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionMediaLive(array $args = [])
  * @method \Aws\MediaPackage\MediaPackageClient createMediaPackage(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMediaPackage(array $args = [])
+ * @method \Aws\MediaPackageVod\MediaPackageVodClient createMediaPackageVod(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionMediaPackageVod(array $args = [])
  * @method \Aws\MediaStore\MediaStoreClient createMediaStore(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMediaStore(array $args = [])
  * @method \Aws\MediaStoreData\MediaStoreDataClient createMediaStoreData(array $args = [])
@@ -248,6 +258,12 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionOrganizations(array $args = [])
  * @method \Aws\PI\PIClient createPI(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionPI(array $args = [])
+ * @method \Aws\Personalize\PersonalizeClient createPersonalize(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionPersonalize(array $args = [])
+ * @method \Aws\PersonalizeEvents\PersonalizeEventsClient createPersonalizeEvents(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionPersonalizeEvents(array $args = [])
+ * @method \Aws\PersonalizeRuntime\PersonalizeRuntimeClient createPersonalizeRuntime(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionPersonalizeRuntime(array $args = [])
  * @method \Aws\Pinpoint\PinpointClient createPinpoint(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionPinpoint(array $args = [])
  * @method \Aws\PinpointEmail\PinpointEmailClient createPinpointEmail(array $args = [])
@@ -351,7 +367,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.93.6';
+    const VERSION = '3.100.7';
 
     /** @var array Arguments for creating clients */
     private $args;
