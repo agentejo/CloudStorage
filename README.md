@@ -1,6 +1,6 @@
 Use cloud storage providers to store assets or thumbnails.
 
-**Notice:** Only Amazon s3, Azure Blobstorage and Minio are supported right now
+**Notice:** Only Amazon s3, Azure Blobstorage, Minio and Google Cloud Storage are supported right now
 
 # Usage
 
@@ -54,6 +54,25 @@ cloudstorage:
         region: us-east-1
         prefix: subfolder-name
         image_address: http://localhost:9000/mybucket
+```
+
+### Google Cloud Storage
+
+```
+cloudstorage:
+    assets:
+        type: gcp_storage
+        bucket: mybucket
+
+        # optional
+        prefix: assets
+        url: https://storage.googleapis.com/mybucket
+```
+
+Authorize Google Cloud Storage with an environment variable like this:
+
+```
+ENV GOOGLE_APPLICATION_CREDENTIALS=/keyFile.json
 ```
 
 That's it!
