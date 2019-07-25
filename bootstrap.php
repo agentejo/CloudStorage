@@ -117,6 +117,31 @@ $this->on('cockpit.filestorages.init', function(&$storages) {
                 ];
 
                 break;
+
+            case 'gcp_storage':
+
+                if (!isset($settings['bucket'])) {
+                    break;
+                }
+
+                $client = new Google\Cloud\Storage\StorageClient();
+                $bucket = $client->bucket($settings['bucket']);
+                $prefix = $settings['prefix'] ?: $key;
+
+
+                $url = $settings['url'] ?? 'https://storage.googleapis.com/'.$settings['bucket'];
+                if (!isset($settings['url']) && $prefix) {
+                    $url .= "/{$prefix}";
+                }
+
+                $storages[$key] = [
+                    'adapter' => 'Superbalist\Flysystem\GoogleStorage\GoogleStorageAdapter',
+                    'args'    => [$client, $bucket, $prefix],
+                    'mount'   => true,
+                    'url'     => $url
+                ];
+
+                break;
         }
 
     }
