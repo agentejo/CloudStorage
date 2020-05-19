@@ -1,10 +1,9 @@
 {
     "require": {
         "league/flysystem-aws-s3-v3": "^1.0",
-        "league/flysystem-azure-blob-storage": "^0.1.5",
+        "league/flysystem-azure-blob-storage": "^0.1.6",
         "superbalist/flysystem-google-storage": "^7.2.1"
     },
-
     "config": {
         "optimize-autoloader": true
     }
