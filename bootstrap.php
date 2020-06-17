@@ -48,7 +48,7 @@ $this->on('cockpit.filestorages.init', function(&$storages) {
 
                 $storages[$key] = [
                     'adapter' => 'League\Flysystem\AwsS3v3\AwsS3Adapter',
-                    'args'    => [$client, $settings['bucket'], $settings['prefix']],
+                    'args'    => [$client, $settings['bucket'], $settings['prefix'], $settings['options'] ?? []],
                     'mount'   => true,
                     'url'     => $url
                 ];
