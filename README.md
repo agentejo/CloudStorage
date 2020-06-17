@@ -25,6 +25,24 @@ cloudstorage:
         url: https://s3.eu-central-1.amazonaws.com
 ```
 
+### Digital Ocean Spaces
+
+```      
+cloudstorage:
+    assets:
+        type: s3
+        key: xxxKeyxxx
+        secret: xxxSecretxxx
+        region: us-sfo-2
+        bucket: mybucket
+        endpoint: https://sfo2.digitaloceanspaces.com
+        url: https://sfo2.digitaloceanspaces.com/{bucket}
+        
+        # advanced options
+        options:
+          ACL: 'public-read'
+```
+
 ### Azure Blobstorage
 
 ```
